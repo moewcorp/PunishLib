@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PunishLib", "PunishLib\PunishLib.csproj", "{5D364491-7C92-43DE-BAE4-C4057E2A8305}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommons", "ECommons\ECommons\ECommons.csproj", "{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{5D364491-7C92-43DE-BAE4-C4057E2A8305}.Release|Any CPU.Build.0 = Release|x64
 		{5D364491-7C92-43DE-BAE4-C4057E2A8305}.Release|x64.ActiveCfg = Release|x64
 		{5D364491-7C92-43DE-BAE4-C4057E2A8305}.Release|x64.Build.0 = Release|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Debug|Any CPU.Build.0 = Debug|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Debug|x64.ActiveCfg = Debug|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Debug|x64.Build.0 = Debug|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Release|Any CPU.ActiveCfg = Release|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Release|Any CPU.Build.0 = Release|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Release|x64.ActiveCfg = Release|x64
+		{B90D9A11-B328-4A1F-9EC6-4828D32B9FCA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

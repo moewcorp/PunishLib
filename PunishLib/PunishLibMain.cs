@@ -1,5 +1,6 @@
 ﻿using Dalamud.Logging;
 using Dalamud.Plugin;
+using ECommons.DalamudServices;
 using Newtonsoft.Json;
 using PunishLib.Configuration;
 using PunishLib.ImGuiMethods;
@@ -17,13 +18,13 @@ namespace PunishLib
     public class PunishLibMain
     {
         internal static string PluginName = "";
-        internal static DalamudPluginInterface PluginInterface;
-        internal static PluginManifest PluginManifest;
+        internal static IDalamudPluginInterface PluginInterface;
         internal static AboutPlugin About;
-        public static PunishConfig PunishConfig;
         internal static SharedConfig SharedConfig;
+        public static PunishConfig PunishConfig;
+        public static PluginManifest PluginManifest;
 
-        public static void Init(DalamudPluginInterface pluginInterface, string pluginName, AboutPlugin about = null, params PunishOption[] opts)
+        public static void Init(IDalamudPluginInterface pluginInterface, string pluginName, AboutPlugin about = null, params PunishOption[] opts)
         {
             PluginName = pluginName;
             PluginInterface = pluginInterface;
@@ -35,7 +36,7 @@ namespace PunishLib
             {
                 var path = Path.Combine(PunishLibMain.PluginInterface.AssemblyLocation.DirectoryName,
                     $"{Path.GetFileNameWithoutExtension(PunishLibMain.PluginInterface.AssemblyLocation.FullName)}.json");
-                PluginLog.Debug($"Path: {path}");
+                Svc.Log.Debug($"Path: {path}");
                 PluginManifest = JsonConvert.DeserializeObject<PluginManifest>(File.ReadAllText(path));
             });
             if (opts.Contains(PunishOption.DefaultKoFi))
@@ -44,7 +45,7 @@ namespace PunishLib
             }
         }
 
-        public static void Init(DalamudPluginInterface pluginInterface, string pluginName, params PunishOption[] opts) => Init(pluginInterface, pluginName, null, opts);
+        public static void Init(IDalamudPluginInterface pluginInterface, string pluginName, params PunishOption[] opts) => Init(pluginInterface, pluginName, null, opts);
 
         public static void Dispose() { }
     }
